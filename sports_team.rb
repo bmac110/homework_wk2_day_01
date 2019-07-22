@@ -1,11 +1,12 @@
 class Team
 
-  attr_accessor :team_name, :players, :coach
+  attr_accessor :team_name, :players, :coach, :result
 
-  def initialize(team_name, players, coach)
+  def initialize(team_name, players, coach, result)
     @team_name = team_name
     @players = players
     @coach = coach
+    @result = result
   end
 
   def team_name()
@@ -33,6 +34,28 @@ class Team
 
   end
 
-  
+  # def did_team_win(result)
+  #   if result == true
+  #     @result += 1
+  #   end
+  # end
+
+  # def did_team_lose(result)
+  #   if result == true
+  #     @result -= 1
+  #   end
+  # end
+
+  def team_outcome(result)
+    if result == "win"
+      @result += 1
+    else
+      @result -= 1
+    end
+  end
+
+
+
+
 
 end

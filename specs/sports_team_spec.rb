@@ -37,4 +37,19 @@ class TestStudent < MiniTest::Test
   def test_check_player_array()
     assert_equal(false, @team.check_player_array("eggboy"))
   end
+
+  # def test_did_team_win()
+  #   @team.did_team_win(true)
+  #   assert_equal(2, @team.result)
+  # end
+  #
+  # def test_did_team_lose()
+  #   @team.did_team_lose(true)
+  #   assert_equal(0, @team.result)
+  # end
+
+  def test_team_outcome()
+    @team.team_outcome("win")
+    assert_equal(1, @team.result)
+  end
 end
