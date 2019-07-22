@@ -5,7 +5,7 @@ require_relative("../sports_team.rb")
 class TestStudent < MiniTest::Test
 
   def setup()
-    @team = Team.new("Leggy Ball Men", ["Billy", "Jimmy", "Bob"], "Coach big legs")
+    @team = Team.new("Leggy Ball Men", ["Billy", "Jimmy", "Bob"], "Coach big legs", 0)
   end
 
   def test_get_team_name()
@@ -30,7 +30,11 @@ class TestStudent < MiniTest::Test
     assert_equal(["Billy", "Jimmy", "Bob", "Tam"], @team.players)
   end
 
-  # def test_check_player_array()
-  #   @team.check_player_array("Tam")
-  #   assert_equal()
+  def test_check_player_array()
+    assert_equal(true, @team.check_player_array("Billy"))
+  end
+
+  def test_check_player_array()
+    assert_equal(false, @team.check_player_array("eggboy"))
+  end
 end

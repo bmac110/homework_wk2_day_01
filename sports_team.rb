@@ -28,4 +28,11 @@ class Team
     @players.push(name)
   end
 
+  def check_player_array(name)
+    @players.include?(name)
+
+  end
+
+  
+
 end
