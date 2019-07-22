@@ -24,4 +24,13 @@ class TestStudent < MiniTest::Test
     @team.set_coach_name("Coach small legs")
     assert_equal("Coach small legs", @team.coach_name)
   end
+
+  def test_add_new_player()
+    @team.add_new_player("Tam")
+    assert_equal(["Billy", "Jimmy", "Bob", "Tam"], @team.players)
+  end
+
+  # def test_check_player_array()
+  #   @team.check_player_array("Tam")
+  #   assert_equal()
 end
