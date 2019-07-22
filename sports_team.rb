@@ -9,14 +9,14 @@ class Team
     @result = result
   end
 
-  def team_name()
-    return @team_name
-  end
-
-  def players()
-    return @players
-  end
-
+  # def team_name()
+  #   return @team_name
+  # end
+  #
+  # def players()
+  #   return @players
+  # end
+  #
   def coach_name()
     return @coach
   end
